@@ -1,0 +1,14 @@
+module.exports={
+  devServer:{
+    //使用代理解决跨域问题
+    proxy:{
+      '/api':{
+        target:'http://81.68.171.156:5050',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api':''
+        }
+      }
+    }
+  }
+}
